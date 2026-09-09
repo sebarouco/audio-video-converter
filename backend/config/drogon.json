@@ -1,0 +1,31 @@
+{
+  "app": "online_file_converter",
+  "threads_num": 4,
+  "enable_session": false,
+  "document_root": "./data/uploads",
+  "upload_path": "./data/uploads",
+  "run_as_daemon": false,
+  "relaunch_on_error": true,
+  "use_gzip": true,
+  "use_sendfile": true,
+  "max_connections": 1000,
+  "max_connections_per_ip": 0,
+  "listeners": [
+    {
+      "address": "127.0.0.1",
+      "port": 8080,
+      "https": false
+    }
+  ],
+  "db_clients": [
+    {
+      "name": "default",
+      "rdbms": "sqlite3",
+      "filename": "data/converter.db",
+      "connection_timeout": 10,
+      "fast_exec": true,
+      "reset_table": false,
+      "client_encoding": "utf8"
+    }
+  ]
+}

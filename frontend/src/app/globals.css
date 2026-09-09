@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 217, 221, 227; /* #D9DDE3 */
+  --background-start-rgb: 24, 30, 42; /* #181E2A */
+  --background-end-rgb: 24, 30, 42; /* #181E2A */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 217, 221, 227; /* #D9DDE3 */
+    --background-start-rgb: 24, 30, 42; /* #181E2A */
+    --background-end-rgb: 24, 30, 42; /* #181E2A */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #181E2A;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

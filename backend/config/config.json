@@ -1,0 +1,54 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8080,
+    "threads": 4,
+    "max_connections": 1000
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "online_file_converter",
+    "user": "converter_user",
+    "password": "converter_password",
+    "connection_pool_size": 10
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "password": "",
+    "db": 0,
+    "connection_pool_size": 5
+  },
+  "file_storage": {
+    "upload_dir": "./data/uploads",
+    "converted_dir": "./data/converted",
+    "temp_dir": "./data/temp",
+    "max_file_size": 536870912,
+    "allowed_extensions": ["mp3", "mp4", "avi", "mov", "wav", "flac", "ogg", "webm", "mkv"],
+    "cleanup_interval_hours": 24,
+    "file_retention_hours": 48
+  },
+  "ffmpeg": {
+    "path": "/usr/bin/ffmpeg",
+    "threads": 2,
+    "timeout_seconds": 3600
+  },
+  "jwt": {
+    "secret": "your-secret-key-change-in-production",
+    "algorithm": "HS256",
+    "expiration_hours": 24,
+    "refresh_expiration_days": 7
+  },
+  "logging": {
+    "level": "info",
+    "file": "./logs/application.log",
+    "max_size_mb": 100,
+    "max_files": 10
+  },
+  "websocket": {
+    "enabled": true,
+    "path": "/ws",
+    "ping_interval_seconds": 30
+  }
+}
